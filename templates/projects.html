@@ -1,36 +1,36 @@
 {% extends "template.html" %}
 {% block header_title %}These are my latest projects{% endblock %}
 {% block content %}
-  <div class="row justify-content-center">
-    <div class="col-md-auto">
-      <div class="card">
-        <img src="{{url_for('static',filename='movieselector_card.png')}}" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title"><b>Movie Selector</b></h5>
-          <p class="card-text">My 2019 winter break project to assist me with my inability to select movies to watch</p>
-          <a href="https://zolor.se/" class="btn btn-primary">zolor.se</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-auto">
-      <div class="card">
-        <img src="{{url_for('static',filename='aoc2019_card.png')}}" class="card-img-top" alt="...">
-        <div class="card-body">
-            <h5 class="card-title"><b>Advent of Code 2019</b></h5>
-            <p class="card-text">I tried my first Advent of Code which is an online event where you're given daily challenges to code instead of chocolate.</br>I completed most days using Python.</p>
-            <a href="https://github.com/Zolor/adventofcode2019" class="btn btn-primary">GitHub</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-md-auto">
-      <div class="card">
-        <img src="{{url_for('static',filename='cs50x_card.jpg')}}" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title"><b>CS50x 2020</b></h5>
-          <p class="card-text">I wanted to learn code on a deeper level and ran through this course which focuses a lot on C.</br>This website was born as part of the Web track</p>
-          <a href="https://www.edx.org/course/cs50s-introduction-to-computer-science" class="btn btn-primary">edx.org</a>
-        </div>
+<div class="row justify-content-center">
+  <div class="col-md-auto">
+    <div class="card">
+      <img src="{{url_for('static',filename='movieselector_card.png')}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"><b>Movie Selector</b></h5>
+        <p class="card-text">My 2019 winter break project to assist me with my inability to select movies to watch</p>
+        <a href="https://zolor.se/" class="btn btn-primary">zolor.se</a>
       </div>
     </div>
   </div>
+  <div class="col-md-auto">
+    <div class="card">
+      <img src="{{url_for('static',filename='aoc2019_card.png')}}" class="card-img-top" alt="...">
+      <div class="card-body">
+          <h5 class="card-title"><b>Advent of Code 2019</b></h5>
+          <p class="card-text">I tried my first Advent of Code which is an online event where you're given daily challenges to code instead of chocolate.</br>I completed most days using Python.</p>
+          <a href="https://github.com/Zolor/adventofcode2019" class="btn btn-primary">GitHub</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-auto">
+    <div class="card">
+      <img src="{{url_for('static',filename='cs50x_card.jpg')}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"><b>CS50x 2020</b></h5>
+        <p class="card-text">I wanted to learn code on a deeper level and ran through this course which focuses a lot on C.</br>This website was born as part of the Web track.</p>
+        <a href="https://www.edx.org/course/cs50s-introduction-to-computer-science" class="btn btn-primary">edx.org</a>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}

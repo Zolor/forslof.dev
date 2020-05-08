@@ -5,6 +5,7 @@
   max-width: 1000px;
   position: relative;
   margin: auto;
+  padding: 20px;
 }
 
 /* Hide the images by default */
@@ -19,7 +20,7 @@
   top: 50%;
   width: auto;
   margin-top: -22px;
-  padding: 15px;
+  padding: 35px;
   color: white;
   font-weight: bold;
   font-size: 22px;
@@ -45,7 +46,7 @@
 .text {
   color: #f2f2f2;
   font-size: 15px;
-  padding: 8px 12px;
+  padding: 28px 12px;
   position: absolute;
   bottom: 8px;
   width: 100%;
