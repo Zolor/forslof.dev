@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="{{url_for('static',filename='styles.css')}}">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="{{url_for('static',filename='sidebar.js')}}"></script>
+        <title>Erika's Homepage</title>
+    </head>
+    <body>
+        <div class="hero-image">
+            <div class="hero-text">
+              <h1>I am Erika Forslöf</h1>
+              <p>This is my CV</p>
+            </div>
+        </div>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <!-- Make sure to change active button here -->
+            <a href="{{ url_for('index') }}" class="btn">Home</a>
+            <a href="{{ url_for('cv') }}" class="btn active">CV</a>
+            <a href="{{ url_for('projects') }}" class="btn">Projects</a>
+            <a href="{{ url_for('contact') }}" class="btn">Contact</a>
+        </div>
+        <span onclick="openNav()">
+            <div class="container">
+              <div class="bar1"></div>
+              <div class="bar2"></div>
+              <div class="bar3"></div>
+            </div>
+        </span>
+        <div id="main">
+            <div class="w3-content w3-margin-top" style="max-width:1400px;">
+              <!-- The Grid -->
+              <div class="w3-row-padding">
+                <!-- Left Column -->
+                <div class="w3-third">
+                  <div class="w3-white w3-text-grey w3-card-4">
+                    <div class="w3-display-container">
+                      <img src="{{url_for('static',filename='head.jpg')}}" style="width:100%" alt="Avatar">
+                    </div>
+                    <div class="w3-container">
+                      </br>
+                      <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal" style="position: relative;"></i>Site Reliability Engineer</p>
+                      <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal" style="position: relative;"></i>Stockholm, Sweden</p>
+                      <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal" style="position: relative;"></i><a href="mailto:erikaforslov@hotmail.com">erikaforslov@hotmail.com</a></p>
+                      <p><i class="fa fa-github fa-fw w3-margin-right w3-large w3-text-teal" style="position: relative;"></i><a href="github.com/zolor">github.com/zolor</a></p>
+                      <hr>
+                      <p class="w3-large"><b><i class="fa fa-asterisk fa-fw w3-margin-right w3-text-teal"></i>Skills</b></p>
+                      <div class="row">
+                        <div class="col-sm-6">
+                          Linux Administration</br>
+                          Google Cloud Platform</br>
+                          Python Development</br>
+                          Ansible and Saltstack</br>
+                        </div>
+                        <div class="col-sm-6">
+                          Team Management</br>
+                          Project Management</br>
+                          Terraform</br>
+                          Git and Github</br>
+                        </div>
+                      </div>
+                      <br>
+                      <p class="w3-large w3-text-theme"><b><i class="fa fa-globe fa-fw w3-margin-right w3-text-teal"></i>Languages</b></p>
+                      <p>English - Professional</p>
+                      <p>Swedish - Native</p>
+                      <br>
+                    </div>
+                  </div><br>
+                <!-- End Left Column -->
+                </div>
+                <!-- Right Column -->
+                <div class="w3-twothird">
+                  <div class="w3-container w3-card w3-white w3-margin-bottom">
+                    <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Work Experience</h2>
+                    <div class="w3-container">
+                      <h5 class="w3-opacity"><b>Senior Site Reliability Engineer & Team Lead / <a href="https://king.com/sv">King</a></b></h5>
+                      <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Sep 2017 - <span class="w3-tag w3-teal w3-round">Current</span></h6>
+                      <p>
+                        Leading a small team of SRE's focusing on team happiness, collaboration and goal oriented mindset.</br>
+                        Apart from that also being an individual contributor focusing on project work and operations.</br>
+                      </p>
+                      <h5 class="w3-text-teal"><i class="fa fa-tasks fa-fw w3-margin-right"></i>Key Projects</h5>
+                      Migrated one datacenter to GCP.</br>
+                      Setup an isolated copy of production in GCP for disaster recovery excercises.</br>
+                      Moved production web servers from bare metal to virtual machines.</br>
+                      Changed configuration management system from CFengine to Saltstack.</br>
+                      <hr>
+                    </div>
+                      <div class="w3-container">
+                        <h5 class="w3-opacity"><b>Hardware Specialist / <a href="https://king.com/sv">King</a></b></h5>
+                        <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Dec 2015 - Sep 2017</h6>
+                        <p>
+                          Spend most of my days in datacenters, deploying, installing and troubleshooting servers.</br>
+                        </p>
+                        <hr>
+                      </div>
+                    <div class="w3-container">
+                      <h5 class="w3-opacity"><b>IT Support and Administrator / Netlight Consulting</b></h5>
+                      <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Sep 2013 - Oct 2015</h6>
+                      <p>Internal IT support to the staff in Stockholm, Oslo and Munich. Administer internal softwares mostly based in Tomcat and Apache on Ubuntu. Network configuration with HP switches and Access Points. Administer an Office365 for 600+ users. Release management over internal systems and more.</p>
+                      <hr>
+                    </div>
+                    <div class="w3-container">
+                      <h5 class="w3-opacity"><b>IT services / Cale Access AB</b></h5>
+                      <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Nov 2012 - Aug 2013</h6>
+                      <p>Handled internal Support for 90 users. Took care of procurement and setup via MDT of new PCs.</p><br>
+                    </div>
+                  </div>
+                  <div class="w3-container w3-card w3-white">
+                    <h2 class="w3-text-grey w3-padding-16"><i class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"></i>Education</h2>
+                    <div class="w3-container">
+                      <h5 class="w3-opacity"><b>CS50x Online Class</b></h5>
+                      <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2020 - <span class="w3-tag w3-teal w3-round">Current</span></h6>
+                      <p>Online computer science class focusing on C.</p>
+                      <hr>
+                    </div>
+                    <div class="w3-container">
+                      <h5 class="w3-opacity"><b>John Bauer Gymnasiet</b></h5>
+                      <h6 class="w3-opacity"><b>Upper secondary school</b></h6>
+                      <h6 class="w3-text-teal"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2007 - 2010</h6>
+                      <p>IT Programme. Network, Databases, Programming in C# / C++ and Server Management.</p>
+                      <hr>
+                    </div>
+                  </div>
+                <!-- End Right Column -->
+                </div>
+              <!-- End Grid -->
+              </div>
+              <!-- End Page Container -->
+            </div>
+        </div>
+        <div class="footer">
+            Header photo by <a href="https://unsplash.com/@markusspiske">Markus Spiske</a> on <a href="https://unsplash.com/">Unsplash</a> || &copy; Copyright 2020
+        </div>
+    </body>
+</html>
