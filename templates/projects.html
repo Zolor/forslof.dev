@@ -1,70 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="{{url_for('static',filename='styles.css')}}">
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <script src="{{url_for('static',filename='sidebar.js')}}"></script>
-        <title>Erika's Homepage</title>
-    </head>
-    <body>
-        <div class="hero-image">
-            <div class="hero-text">
-              <h1>I am Erika Forslöf</h1>
-              <p>These are my latest projects</p>
-            </div>
+{% extends "template.html" %}
+{% block header_title %}These are my latest projects{% endblock %}
+{% block content %}
+  <div class="row justify-content-center">
+    <div class="col-md-auto">
+      <div class="card">
+        <img src="{{url_for('static',filename='movieselector_card.png')}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><b>Movie Selector</b></h5>
+          <p class="card-text">My 2019 winter break project to assist me with my inability to select movies to watch</p>
+          <a href="https://zolor.se/" class="btn btn-primary">zolor.se</a>
         </div>
-        <div id="mySidenav" class="sidenav">
-          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-          <!-- Make sure to change active button here -->
-          <a href="{{ url_for('index') }}" class="btn">Home</a>
-          <a href="{{ url_for('cv') }}" class="btn">CV</a>
-          <a href="{{ url_for('projects') }}" class="btn active">Projects</a>
-          <a href="{{ url_for('contact') }}" class="btn">Contact</a>
+      </div>
+    </div>
+    <div class="col-md-auto">
+      <div class="card">
+        <img src="{{url_for('static',filename='aoc2019_card.png')}}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title"><b>Advent of Code 2019</b></h5>
+            <p class="card-text">I tried my first Advent of Code which is an online event where you're given daily challenges to code instead of chocolate.</br>I completed most days using Python.</p>
+            <a href="https://github.com/Zolor/adventofcode2019" class="btn btn-primary">GitHub</a>
         </div>
-        <span onclick="openNav()">
-            <div class="container">
-              <div class="bar1"></div>
-              <div class="bar2"></div>
-              <div class="bar3"></div>
-            </div>
-        </span>
-        <div id="main">
-            <div class="row justify-content-center">
-              <div class="col-md-auto">
-                <div class="card">
-                  <img src="{{url_for('static',filename='movieselector_card.png')}}" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Movie Selector</h5>
-                    <p class="card-text">My 2019 winter break project to assist me with my inability to select movies to watch</p>
-                    <a href="https://zolor.se/" class="btn btn-primary">zolor.se</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-auto">
-                <div class="card">
-                  <img src="{{url_for('static',filename='aoc2019_card.png')}}" class="card-img-top" alt="...">
-                  <div class="card-body">
-                      <h5 class="card-title">Advent of Code 2019</h5>
-                      <p class="card-text">I tried my first Advent of Code which is an online event where you're given daily challenges to code instead of chocolate.</br>I completed most days using Python.</p>
-                      <a href="https://github.com/Zolor/adventofcode2019" class="btn btn-primary">GitHub</a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-auto">
-                <div class="card">
-                  <img src="{{url_for('static',filename='cs50x_card.jpg')}}" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">CS50x 2020</h5>
-                    <p class="card-text">I wanted to learn code on a deeper level and ran through this course which focuses a lot on C.</br>This website was born as part of the Web track</p>
-                    <a href="https://www.edx.org/course/cs50s-introduction-to-computer-science" class="btn btn-primary">edx.org</a>
-                  </div>
-                </div>
-              </div>
-            </div>
+      </div>
+    </div>
+    <div class="col-md-auto">
+      <div class="card">
+        <img src="{{url_for('static',filename='cs50x_card.jpg')}}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"><b>CS50x 2020</b></h5>
+          <p class="card-text">I wanted to learn code on a deeper level and ran through this course which focuses a lot on C.</br>This website was born as part of the Web track</p>
+          <a href="https://www.edx.org/course/cs50s-introduction-to-computer-science" class="btn btn-primary">edx.org</a>
         </div>
-        <div class="footer">
-            Header photo by <a href="https://unsplash.com/@markusspiske">Markus Spiske</a> on <a href="https://unsplash.com/">Unsplash</a> || &copy; Copyright 2020
-        </div>
-    </body>
-</html>
+      </div>
+    </div>
+  </div>
+{% endblock %}

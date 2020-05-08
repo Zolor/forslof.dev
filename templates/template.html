@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {% block head %}
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static',filename='styles.css')}}">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="{{url_for('static',filename='sidebar.js')}}"></script>
+    <title>Erika's Homepage</title>
+    {% endblock %}
+  </head>
+    <body>
+        <div class="hero-image">
+            <div class="hero-text">
+                <h1>I am Erika Forslöf</h1>
+                <p>{% block header_title %}These are my latest projects{% endblock %}</p>
+            </div>
+        </div>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="{{ url_for('index') }}"{% if request.path == '/' %} class="btn active" {% else %} class="btn" {% endif %}>Home</a>
+            <a href="{{ url_for('cv') }}" {% if request.path == '/cv' %} class="btn active" {% else %} class="btn" {% endif %}>CV</a>
+            <a href="{{ url_for('projects') }}" {% if request.path == '/projects' %} class="btn active" {% else %} class="btn" {% endif %}>Projects</a>
+            <a href="{{ url_for('contact') }}" {% if request.path == '/contact' %} class="btn active" {% else %} class="btn" {% endif %}>Contact</a>
+        </div>
+        <span onclick="openNav()">
+            <div class="container">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+        </span>
+        <div id="main">
+            {% block content%}
+            {% endblock%}
+        </div>
+        <div class="footer">
+            Header photo by <a href="https://unsplash.com/@markusspiske">Markus Spiske</a> on <a href="https://unsplash.com/">Unsplash</a> || &copy; Copyright 2020
+        </div>
+    </body>
+</html>
