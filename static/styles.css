@@ -46,7 +46,7 @@ body, html {
   background-color: #111; /* Black*/
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 250px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  transition: 0.4s; /* 0.5 second transition effect to slide in the sidenav */
 }
 
 /* The navigation menu links */
@@ -98,7 +98,7 @@ body, html {
   cursor: pointer;
   left: 0px;
   position: fixed;
-  width:100%;
+  width: 50px;
 }
 
 .bar1, .bar2, .bar3 {
@@ -149,4 +149,5 @@ body {
 
 .content {
   padding: 20px;
+  margin-top: 45px;
 }
