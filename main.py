@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from flask import Flask, render_template
+from flask import Flask, render_template, send_from_directory
 
 # If `entrypoint` is not defined in app.yaml, App Engine will look for an app
 # called `app` in `main.py`.
@@ -33,6 +33,12 @@ def projects():
 @app.route('/contact', methods=["GET"])
 def contact():
     return render_template('contact.html')
+
+@app.route('/cs50certificate', methods=["GET"])
+def certificate():
+    return send_from_directory(directory='static/cert',
+                            filename='cs50x_certificate.pdf',
+                            mimetype='application/pdf')
 
 if __name__ == '__main__':
     # This is used when running locally only. When deploying to Google App
