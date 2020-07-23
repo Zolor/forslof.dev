@@ -1,36 +1,4 @@
 {% extends "template.html" %}
-{% block header_title %}This is my homepage 2.0{% endblock %}
-{% block head %}
-{{ super() }}
-<link rel="stylesheet" href="{{url_for('static',filename='slideshowstyle.css')}}">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-{% endblock%}
+{% block header_title %}This is my homepage 2.1{% endblock %}
 {% block content %}
-<!-- Slideshow container -->
-<div class="slideshow-container">
-  <!-- Full-width static with number and caption text -->
-  <div class="mySlides fade">
-    <img src="{{url_for('static',filename='slideshow/emile.jpg')}}" style="width:100%">
-    <div class="text">Photo by Emile Guillemot on Unsplash</div>
-  </div>
-  <div class="mySlides fade">
-    <img src="{{url_for('static',filename='slideshow/james.jpg')}}" style="width:100%">
-    <div class="text">Photo by James Wainscoat on Unsplash</div>
-  </div>
-  <div class="mySlides fade">
-    <img src="{{url_for('static',filename='slideshow/geronimo.jpg') }}" style="width:100%">
-    <div class="text">Photo by Geronimo Giqueaux on Unsplash</div>
-  </div>
-  <!-- Next and previous buttons -->
-  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-  <a class="next" onclick="plusSlides(1)">&#10095;</a>
-</div>
-<br>
-<!-- The dots/circles -->
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span>
-  <span class="dot" onclick="currentSlide(2)"></span>
-  <span class="dot" onclick="currentSlide(3)"></span>
-</div>
-<script src="{{url_for('static',filename='slideshow.js')}}"></script>
 {% endblock %}
